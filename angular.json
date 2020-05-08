@@ -53,7 +53,7 @@
               "node_modules/chart.js/dist/Chart.min.js"
             ],
             "customWebpackConfig": {
-              "path": "./webpack.config.js"
+              "path": "./webpack.prod.js"
             }
           },
           "configurations": {
@@ -85,7 +85,10 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "ngx-admin-demo:build"
+            "browserTarget": "ngx-admin-demo:build",
+            "customWebpackConfig": {
+              "path": "./webpack.local.js"
+            }
           },
           "configurations": {
             "production": {
