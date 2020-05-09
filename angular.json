@@ -11,6 +11,9 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.local.js"
+            },
             "aot": true,
             "preserveSymlinks": true,
             "rebaseRootRelativeCssUrls": true,
@@ -51,10 +54,7 @@
               "node_modules/echarts/dist/echarts.min.js",
               "node_modules/echarts/dist/extension/bmap.min.js",
               "node_modules/chart.js/dist/Chart.min.js"
-            ],
-            "customWebpackConfig": {
-              "path": "./webpack.prod.js"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -85,10 +85,7 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "ngx-admin-demo:build",
-            "customWebpackConfig": {
-              "path": "./webpack.local.js"
-            }
+            "browserTarget": "ngx-admin-demo:build"
           },
           "configurations": {
             "production": {
